@@ -7,27 +7,24 @@ const rl = readline.createInterface({
     prompt: 'tulis kalimatmu disini > '
 });
 
-function stringManipulation(word) {
-    let vocalAlpha = 'a i u e o'; // declare vocal alphabets
-    let startWord = word.charAt(0); // get start char of paramater
+const stringManipulation = (word) => {
+    let vocal = 'a i u e o';
 
-    if (vocalAlpha.includes(startWord) === true) {
+    if (vocal.includes(word[0])) {
         return word;
     } else {
-        return word.slice(1, word.length) + startWord + 'nyo';
+        return word.substring(1) + word[0] + 'nyo';
     }
 }
 
-function sentencesManipulation(sentence) {
+const sentencesManipulation = (sentence) => {
     let result = '';
     let splitSentence = sentence.split(' ');
-
     for (let i = 0; i < splitSentence.length; i++) {
         result += stringManipulation(splitSentence[i]) + ' ';
     }
-    return result;
+    return result.trim();
 }
-
 
 rl.prompt();
 rl.on('line', (line) => {
