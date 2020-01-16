@@ -4,7 +4,6 @@ const readline = require('readline');
 const fs = require('fs');
 
 let myArgs = process.argv;
-console.log('myArgs: ' + myArgs);
 
 switch (myArgs[2]) {
     case `${myArgs[2]}`:
@@ -21,7 +20,7 @@ switch (myArgs[2]) {
 
                 let countQuestion = 0;
                 let countAnswer = 1;
-                console.log(`Selamat datang di permainan Tebak-tebakan. Kamu akan diberikan pertanyaan dari file ini '${myArgs[2]}''`);
+                console.log(`Selamat datang di permainan Tebak-tebakan. Kamu akan diberikan pertanyaan dari file ini '${myArgs[2]}'`);
                 console.log('Untuk bermain, jawablah dengan jawaban yang sesuai.');
                 console.log(`Gunakan 'skip' untuk menangguhkan pertanyaannya, dan di akhir pertanyaan akan ditanyakan lagi.\n`);
                 console.log(`Pertanyaan: ${data[countQuestion].definition}`);
