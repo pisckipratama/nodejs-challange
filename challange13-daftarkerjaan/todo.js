@@ -35,7 +35,12 @@ switch (myArgv[2]) {
         break;
 
     case 'complete':
-        console.log('ini komplit');
+        if (!myArgv[3]) {
+            console.log('add your id list!');
+        } else {
+            data[myArgv[3] - 1].complete = true;
+            fs.writeFileSync('data.json', JSON.stringify(data, null, 3));
+        }
         break;
 
     case 'tag':
