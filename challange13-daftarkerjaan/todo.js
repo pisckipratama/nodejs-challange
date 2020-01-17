@@ -25,6 +25,7 @@ switch (myArgv[2]) {
         break;
 
     case 'list':
+        console.log('Daftar Pekerjaan');
         for (let i = 0; i < data.length; i++) {
             console.log(`${i + 1}. ${data[i].complete ? '[x]' : '[ ]'} ${data[i].task}`);
         }
@@ -38,6 +39,7 @@ switch (myArgv[2]) {
         if (!myArgv[3]) {
             console.log('add your id list!');
         } else {
+            console.log(`"${data[myArgv[3] - 1].task}" telah selesai.`);
             data[myArgv[3] - 1].complete = true;
             fs.writeFileSync('data.json', JSON.stringify(data, null, 3));
         }
