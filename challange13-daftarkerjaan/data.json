@@ -1,1 +1,17 @@
-[]
+[
+   {
+      "task": "Belajar javascript",
+      "complete": false,
+      "tags": []
+   },
+   {
+      "task": "Belajar nodejs",
+      "complete": false,
+      "tags": []
+   },
+   {
+      "task": "nyuci",
+      "complete": true,
+      "tags": []
+   }
+]
