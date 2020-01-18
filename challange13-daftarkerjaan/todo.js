@@ -32,12 +32,21 @@ switch (myArgv[2]) {
         break;
 
     case 'delete':
-        console.log('ini delete');
+        if (!myArgv[3]) {
+            console.log('masukkan id yang akan dihapus');
+            process.exit(0);
+        } else {
+            console.log(`"${data[myArgv[3] - 1].task}" telah dihapus dalam daftar.`);
+            data.splice(myArgv[3] - 1, 1);
+        }
+
+        fs.writeFileSync('data.json', JSON.stringify(data, null, 3));
         break;
 
     case 'complete':
         if (!myArgv[3]) {
             console.log('add your id list!');
+            process.exit(0);
         } else {
             console.log(`"${data[myArgv[3] - 1].task}" telah selesai.`);
             data[myArgv[3] - 1].complete = true;
