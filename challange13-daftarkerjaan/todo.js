@@ -21,7 +21,22 @@ $ node todo.js list `
 
 switch (myArgv[2]) {
     case 'add':
-        console.log('ini add');
+        if (!myArgv[3]) {
+            console.log('Masukkan aktivitas.');
+            process.exit();
+        } else {
+            let output = ' ';
+            for (let i = 3; i < myArgv.length; i++) {
+                output += myArgv[i] + ' ';
+            }
+            data.push({
+                "task": output.trim(),
+                "complete": false,
+                "tag": []
+            });
+            console.log(`"${output.trim()}" telah ditambahkan.`);
+            fs.writeFileSync('data.json', JSON.stringify(data, null, 3));
+        }
         break;
 
     case 'list':
@@ -58,7 +73,18 @@ switch (myArgv[2]) {
         console.log('ini tag');
         break;
 
-    case 'help':
-    default:
-        console.log(msg);
+    case 'uncomplete':
+        if (!myArgv[3]) {
+            console.log('Masukkin id task nya bro!');
+            process.exit(0);
+        } else {
+            console.log(`"${data[myArgv[3] - 1].task}" status selesai dibatalkan.`);
+            data[myArgv[3] - 1].complete = false;
+            fs.writeFileSync('data.json', JSON.stringify(data, null, 3));
+        }
+        break;
+
+        case 'help':
+        default:
+            console.log(msg);
 }

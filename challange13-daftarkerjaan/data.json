@@ -1,17 +1,17 @@
 [
    {
-      "task": "Belajar javascript",
+      "task": "telpon kasih adinda",
       "complete": false,
-      "tags": []
+      "tag": []
    },
    {
-      "task": "Belajar nodejs",
+      "task": "saya harus selesaikan challange 13",
       "complete": false,
-      "tags": []
+      "tag": []
    },
    {
-      "task": "nyuci",
-      "complete": true,
-      "tags": []
+      "task": "saya harus selesaikan materi nodejs",
+      "complete": false,
+      "tag": []
    }
 ]

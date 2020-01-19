@@ -23,7 +23,6 @@ const fs = require('fs');
 // let data = JSON.stringify(arr);
 // console.log(data);
 
-let id = 3;
 let tes = fs.readFileSync('data.json', 'utf8');
 
 console.log('sebelum:');
@@ -32,10 +31,19 @@ for (let i = 0; i < arr.length; i++) {
     console.log(`${i + 1}. ${arr[i].complete ? '[x]' : '[ ]'} ${arr[i].task}`);
 }
 
-arr.splice(id - 1, 1);
-console.log('\nsesudah:');
+// arr.splice(id - 1, 1);
+// console.log('\nsesudah:');
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(`${i + 1}. ${arr[i].complete ? '[x]' : '[ ]'} ${arr[i].task}`);
+// }
+
+// fs.writeFileSync('data.json', JSON.stringify(arr, null, 3));
+
+let id = 1;
+
+arr[id - 1].complete = false;
+console.log('\nsesudah');
+
 for (let i = 0; i < arr.length; i++) {
     console.log(`${i + 1}. ${arr[i].complete ? '[x]' : '[ ]'} ${arr[i].task}`);
-}
-
-fs.writeFileSync('data.json', JSON.stringify(arr, null, 3));
+};
