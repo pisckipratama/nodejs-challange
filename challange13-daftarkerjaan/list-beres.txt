@@ -1,8 +1,0 @@
-- node todo tampil menu v
-- fitur add data (node todo add <task>) v
-- fitur menampilkan data (node todo list) v
-- fitur hapus data (node todo delete <id>) v
-- fitur complete data (node todo complete <id>) v
-- fitur help (node todo help) v
-- fitur batal complete (node todo uncomplete (id)) 
-- 

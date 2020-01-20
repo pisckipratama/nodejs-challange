@@ -1,16 +1,14 @@
 [
    {
-      "task": "telpon kasih adinda",
-      "complete": false,
-      "tag": []
+      "task": "saya akan memasak",
+      "complete": true,
+      "tag": [
+         "masak",
+         "sayur"
+      ]
    },
    {
-      "task": "saya harus selesaikan challange 13",
-      "complete": false,
-      "tag": []
-   },
-   {
-      "task": "saya harus selesaikan materi nodejs",
+      "task": "saya akan pergi ke sekolah",
       "complete": false,
       "tag": []
    }
